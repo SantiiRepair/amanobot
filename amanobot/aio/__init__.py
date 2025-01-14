@@ -1153,7 +1153,7 @@ class DelegatorBot(SpeakerBot):
 
             if id is None:
                 continue
-            if isinstance(id, collections.Hashable):
+            if isinstance(id, collections.abc.Hashable):
                 if id not in dict or dict[id].done():
                     c = make_coroutine_obj((self, msg, id))
 
